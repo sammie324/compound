@@ -254,7 +254,7 @@ export const useBoardStore = create<BoardStore>((set, get) => ({
   // Persistence
   loadFromStorage: () => {
     const data = loadFromStorage();
-    if (data && data.columns && data.columns.length > 0) {
+    if (data) {
       // Determine activeGoalId
       let activeGoalId = data.activeGoalId ?? null;
       if (!activeGoalId && data.goals?.length && data.activeWorkspaceId) {
